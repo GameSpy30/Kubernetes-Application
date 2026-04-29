@@ -1,0 +1,7 @@
+app:
+  name: my-app
+  replicas: 3
+
+image:
+  repository: <ECR-URL>
+  tag: latest

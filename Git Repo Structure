@@ -1,0 +1,25 @@
+eks-platform/
+│
+├── terraform/
+│   ├── vpc.tf
+│   ├── eks.tf
+│   ├── karpenter.tf
+│
+├── helm/
+│   └── my-app/
+│       ├── Chart.yaml
+│       ├── values.yaml
+│       └── templates/
+│           └── app.yaml   # 👈 ALL k8s resources merged here
+│
+├── argocd/
+│   └── application.yaml
+│
+├── jenkins/
+│   └── Jenkinsfile
+│
+├── app/
+│   ├── Dockerfile
+│   └── src/
+│
+└── README.md
