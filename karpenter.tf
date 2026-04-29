@@ -5,5 +5,5 @@ module "karpenter" {
 
   cluster_name = module.eks.cluster_name
 
-  enable_irsa = true
+  enable_irsa = true           #IAM Roles for Service Accounts
 }
