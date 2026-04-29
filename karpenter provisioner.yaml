@@ -1,0 +1,20 @@
+#Terraform (EKS + Karpenter)
+
+apiVersion: karpenter.sh/v1beta1
+kind: Provisioner
+metadata:
+  name: default
+spec:
+  requirements:
+    - key: "node.kubernetes.io/instance-type"
+      operator: In
+      values: ["t3.medium", "t3.large"]
+
+  limits:
+    resources:
+      cpu: "1000"
+
+  providerRef:
+    name: default
+
+  ttlSecondsAfterEmpty: 30
